@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đi biển không, người đẹp?</title>
+    <style>
+        #questionContainer {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            text-align: center;
+            margin: 50px auto;
+            padding-top: 50px;
+        }
+        button {
+            position: absolute;
+        }
+        #heartLoader {
+            display: none;
+            text-align: center;
+            font-size: 20px;
+        }
+        #resultContainer {
+            display: none;
+            text-align: center;
+            font-size: 24px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="questionContainer">
+        <p>Đi biển không, người đẹp?</p>
+        <button id="yesBtn" style="left: 50px; top: 100px;">Yes</button>
+        <button id="noBtn" style="left: 150px; top: 100px;">No</button>
+    </div>
+
+    <div id="heartLoader">❤️ Loading... ❤️</div>
+    <div id="resultContainer">Tui biết bạn muốn ở nhà học bài mà, cố lên nào! ❤️</div>
+
+    <script>
+        document.getElementById("noBtn").addEventListener("mouseover", () => {
+            const container = document.getElementById("questionContainer");
+            const newX = Math.floor(Math.random() * (container.offsetWidth - 50));
+            const newY = Math.floor(Math.random() * (container.offsetHeight - 50));
+
+            document.getElementById("noBtn").style.left = `${newX}px`;
+            document.getElementById("noBtn").style.top = `${newY}px`;
+        });
+
+        document.getElementById("yesBtn").addEventListener("click", () => {
+            document.getElementById("heartLoader").style.display = "block";
+
+            setTimeout(() => {
+                document.getElementById("heartLoader").style.display = "none";
+                document.getElementById("resultContainer").style.display = "inherit";
+            }, 3000);
+        });
+    </script>
+
+</body>
+</html>
