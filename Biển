@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đi biển không, người đẹp?</title>
+    <title>Do You Love Me?</title>
     <style>
         #questionContainer {
             position: relative;
@@ -33,13 +33,13 @@
 <body>
 
     <div id="questionContainer">
-        <p>Đi biển không, người đẹp?</p>
+        <p>Do you love me?</p>
         <button id="yesBtn" style="left: 50px; top: 100px;">Yes</button>
         <button id="noBtn" style="left: 150px; top: 100px;">No</button>
     </div>
 
     <div id="heartLoader">❤️ Loading... ❤️</div>
-    <div id="resultContainer">Tui biết bạn muốn ở nhà học bài mà, cố lên nào! ❤️</div>
+    <div id="resultContainer">I love you too! ❤️</div>
 
     <script>
         document.getElementById("noBtn").addEventListener("mouseover", () => {
